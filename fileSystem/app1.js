@@ -1,4 +1,5 @@
-// file Sytem  - fs
+// file Sytem  - fs ------->
+
 // const fs = require("fs");
 // fs.readFile("file1.txt", "utf-8", (err, data) => {
 //   if (err) {
@@ -8,7 +9,7 @@
 //   console.log("File Read :  ", data);
 // });
 
-// writeFile('file Type ','DATA', callback)
+// writeFile('file Type ','DATA', callback)--------->
 // fs.writeFile("code1.html", "i am html file", (err) => {
 //   if (err) {
 //     console.error("Error writing file", err);
