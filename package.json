@@ -1,0 +1,21 @@
+{
+  "name": "mynodeapp-3pm",
+  "version": "1.0.0",
+  "description": "Node.js Backend Mastery 3pm",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganeshdutt100/Node.js-Backend-Mastery-3pm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ganeshdutt100/Node.js-Backend-Mastery-3pm/issues"
+  },
+  "homepage": "https://github.com/ganeshdutt100/Node.js-Backend-Mastery-3pm#readme"
+}
