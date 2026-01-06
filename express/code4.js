@@ -23,3 +23,7 @@ app.get("/user/:name/:course", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port s`);
 });
+
+// task - product - category - id;
+
+// message :  app category (name )  product id
