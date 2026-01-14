@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(28, 28, 28);
+            color: white;
+        }
+
+        .mainCard {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .card {
+            font-family: sans-serif;
+            text-align: center;
+            width: 300px;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 1px 1px 1px 1px black;
+            background-color: rgb(13, 13, 33);
+
+        }
+
+        button {
+            color: white;
+            border-radius: 20px;
+            background-color: rgb(13, 13, 54);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="getData()">Load Data</button>
+    <div id="container"></div>
+
+    <script>
+        async function getData() {
+            try {
+                const response = await fetch('http://localhost:3000/api/users')
+
+                const data = await response.json()
+                console.log(data);
+
+                const container = document.getElementById('container')
+                container.innerHTML = ''
+
+                data.map((user) => {
+                    const card = `
+                   <div class="mainCard">
+                     <div  class="card" >
+                        <p>ID: ${user.id}</p>
+                        <h2>Name: ${user.name}</h2>
+                        <p>Age: ${user.age}</p>
+                        <p>Details: ${user.details}</p>
+                    </div>
+                    </div>
+                    `
+                    container.innerHTML += card;
+                })
+
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
