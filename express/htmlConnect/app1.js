@@ -42,6 +42,20 @@ const users = [
     details:
       "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ipsam!",
   },
+  {
+    id: 4,
+    name: "Aditi",
+    age: 16,
+    details:
+      "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ipsam!",
+  },
+  {
+    id: 5,
+    name: "Gourav",
+    age: 21,
+    details:
+      "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ipsam!",
+  },
 ];
 
 app.get("/api/users", (req, res) => {
