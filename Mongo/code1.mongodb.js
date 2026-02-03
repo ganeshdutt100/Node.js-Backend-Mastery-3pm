@@ -36,7 +36,7 @@ use("BackendClass");
 // db.code4.updateOne({ name: "a" }, { $set: { phone: "3847827382837" } });
 // db.code4.find({ name: "a" });
 // db.code4.deleteOne({ name: "a" });
-db.code4.find();
+// db.code4.find();
 
 // collection->// products->
 // 5product insert (name,price,category,stock)->
