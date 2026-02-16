@@ -22,6 +22,13 @@ app.get("/dashboard", (req, res) => {
     res.send("User not found");
   }
 });
+app.get("/logout", (req, res) => {
+  res.clearCookie("profile");
+  res.send("user logged out");
+});
+app.get("/profile", (req, res) => {
+  console.log(req.cookies);
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
