@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div>
+        <h1>Admin Panel</h1>
+        <% if(error) { %>
+            <p>
+                <%= error %>
+            </p>
+
+            <% } %>
+
+                <% if(!messages) {%>
+                    <form action="/admin" method="POST">
+                        <label for="password">Admin Password:</label>
+                        <input type="password" id="password" name="password" required><br>
+
+                        <input type="submit" value="Admin Login">
+                    </form>
+                    <% } else { %>
+                        <h3>Welcome Admin</h3>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                            </tr>
+                            <%messages.forEach(msg=>{ %>
+                                <tr>
+                                    <td>
+                                        <%= msg.name %>
+                                    </td>
+                                    <td>
+                                        <%= msg.email %>
+                                    </td>
+                                    <td>
+                                        <%= msg.message %>
+                                    </td>
+                                    <td>
+                                        <%= msg.date %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </table>
+                        <% } %>
+
+    </div>
+</body>
+
+</html>
